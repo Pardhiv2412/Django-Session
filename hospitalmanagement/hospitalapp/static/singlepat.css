@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.patient-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Candara', sans-serif;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"]{
+    margin-bottom: 15px;
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0b4625;
+    margin-left: 140px;
+    margin-top: 15px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #043117;
+}
+.mybutton {
+    margin-left: 230px;
+}
+.backbutton{
+    margin-left: 235px;
+}

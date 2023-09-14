@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Patients List</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'doctors.css' %}">
+    </head>
+<body>
+
+<h1>Patients List</h1>
+
+<table>
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Cause</th>
+        <th>All Details</th>
+        <th>Remove</th>
+    </tr></thead>
+<tbody><tr>
+    {% for pat in pats %}
+        <td>{{ pat.pid }}</td>
+        <td>{{ pat.name }}</td>
+        <td>{{ pat.cause }}</td>
+        <td><a href="{% url 'singlepat' pat.pk %}">View</a></td>
+        <td><a href="{% url 'deletepat' pat.pk %}"><button class="delete-button">🗑️</button></a></td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+<div class="center-container">
+<a href="{% url 'addpat' %}"><button style="text-align: center;" class="register-button">Register New Patient</button></a>
+</div>
+</body>
+</html>

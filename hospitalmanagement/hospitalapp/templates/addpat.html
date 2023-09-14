@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'add.css' %}">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Register New Patient</h2>
+        <form action="{% url 'savepat' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="pid">ID:</label>
+                <input type="text" id="pid" name="pid" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="pphno">Phone:</label>
+                <input type="number" id="pphno" name="pphno" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="cause">Cause:</label>
+                <input type="text" id="cause" name="cause" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+            <a href="{% url 'allpat' %}" ><button class="view-button">View Existing Patients</button></a>
+    
+    </div>
+</body>
+</html>

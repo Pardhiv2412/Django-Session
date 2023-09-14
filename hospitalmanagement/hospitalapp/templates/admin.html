@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System Admin Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'admin.css' %}">
+</head>
+<body>
+    <div class="admin-container">
+        <h2>Welcome, Admin</h2>
+        <div class="admin-buttons">
+            <a href="{% url 'adddoc' %}"><button class="admin-button">Register New Doctor</button></a>
+            <a href="{% url 'addpat' %}"><button class="admin-button">Register New Patient</button></a>
+            <a href="{% url 'alldoc' %}"><button class="admin-button">List Doctors</button></a>
+            <a href="{% url 'allpat' %}"><button class="admin-button">List patients</button></a>
+        </div>
+    </div>
+</body>
+</html>

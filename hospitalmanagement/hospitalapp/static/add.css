@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+        body {
+            font-family: 'Candara', sans-serif;
+            background-color: #f7f8f3;
+        }
+        .form-container {
+            max-width: 450px;
+            margin: 150px auto;
+            padding: 20px;
+            background-color: #d5f2e9;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border: #0056b3;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group input[type="email"] {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .form-group input[type="submit"],.view-button {
+            background-color: #0b4625;
+            margin-left: 160px;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .form-group input[type="submit"]:hover,.view-button:hover{
+            background-color: #043117;
+        }
+        .view-button {
+            background-color: #0b4625;
+            margin-left: 115px;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        .view-button:hover {
+            background-color: #043117;
+        }
+

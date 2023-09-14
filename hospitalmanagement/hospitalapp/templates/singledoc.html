@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Details</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'singlepat.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Doctor Details</h1>
+        <div class="patient-details">
+        <form method="post" action="{% url 'updatedoc' doc.pk %}">
+            {% csrf_token %}
+            <label for="patientId">Doctor ID:</label>
+            <input type="text" id="patientId" name="did" value="{{ doc.did }}">
+            <label for="patientId">Name:</label>
+            <input type="text" id="patientName" name="name" value="{{ doc.name }}">
+            <label for="patientId">Department:</label>
+            <input type="text" id="patientCause" name="department" value="{{ doc.department }}">
+            <label for="patientId">Addreess:</label>
+            <input type="text" id="patientAddress" name="address" value="{{ doc.address }}">
+            <label for="patientId">Phone Number:</label>
+            <input type="number" id="patientPhone" name="dphno" value="{{ doc.dphno }}">
+            <label for="patientId">Email:</label>
+            <input type="text" id="patientPhone" name="email" value="{{ doc.email }}">
+            <label for="patientId">Username:</label>
+            <input type="text" id="patientPhone" name="username" value="{{ doc.username }}">
+            <label for="patientId">Password:</label>
+            <input type="text" id="patientPhone" name="password" value="{{ doc.password }}">
+            <button type="submit" class="mybutton">Make Changes</button>
+        </form>
+        </div>
+        <a href="{% url 'alldoc' %}"><button class="backbutton">Back</button></a>
+    </div>
+
+</body>
+</html>
